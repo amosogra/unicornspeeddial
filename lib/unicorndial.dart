@@ -237,7 +237,6 @@ class _UnicornDialer extends State<UnicornDialer> with TickerProviderStateMixin 
           child: Stack(
               //fit: StackFit.expand,
               alignment: Alignment.bottomCenter,
-              overflow: Overflow.visible,
               children: childButtonsList.toList()..add(Positioned(right: null, bottom: null, child: mainFloatingButton))));
 
       var modal = ScaleTransition(
@@ -255,7 +254,7 @@ class _UnicornDialer extends State<UnicornDialer> with TickerProviderStateMixin 
               )));
 
       return widget.hasBackground
-          ? Stack(alignment: Alignment.topCenter, overflow: Overflow.visible, children: [Positioned(right: -16.0, bottom: -16.0, child: modal), unicornDialWidget])
+          ? Stack(alignment: Alignment.topCenter, children: [Positioned(right: -16.0, bottom: -16.0, child: modal), unicornDialWidget])
           : unicornDialWidget;
     }
 
